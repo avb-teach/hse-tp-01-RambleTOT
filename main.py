@@ -28,7 +28,7 @@ for el in os.walk(i):
     el_null = el[0].replace(i, '')
     path = el_null.split('/')
     for j in range(len(path) + 1 - m, len(path)):
-        create_dir("".join(path[j:]))
+        create_dir("/".join(path[j:]))
     for j in el[2]:
         copy_file(el[0] + "/" + j,
                   o + "/" + "/".join(path[len(path) + 1 - m:]))
